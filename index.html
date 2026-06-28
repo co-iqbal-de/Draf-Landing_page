@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>ABADI JAYA - Abon Sapi Asli Solo Cita Rasa Tradisional</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Abon Sapi Asli Solo dari ABADI JAYA. Dibuat dari daging sapi pilihan dengan resep turun-temurun. Gurih, renyah, dan tahan lama. Pesan sekarang via WhatsApp." />
+  <meta name="keywords"    content="abon sapi solo, abon sapi asli, abon sapi halal, oleh-oleh solo, ABADI JAYA" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="ABADI JAYA - Abon Sapi Asli Solo" />
+  <meta property="og:description" content="Abon Sapi Asli Solo dengan cita rasa tradisional. Gurih, renyah, halal, dan tanpa pengawet berbahaya." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:locale"      content="id_ID" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "ABADI JAYA",
+    "description": "Usaha abon sapi khas Solo dengan cita rasa tradisional dan bahan baku pilihan",
+    "address": { "@type": "PostalAddress", "addressLocality": "Solo", "addressCountry": "ID" },
+    "telephone": "+6281234567890",
+    "servesCuisine": "Indonesian"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- CSS (urutan penting: variables → layout → components) -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+<!-- ===================== LOADER ===================== -->
+<div id="loader">
+  <div class="loader-logo">ABADI <span>JAYA</span></div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+
+    <!-- LOGO
+         Mode A (default) — teks + ikon:
+           Tampil seperti sekarang. Ubah teks di bawah sesuai nama usaha.
+
+         Mode B — gambar logo:
+           1. Simpan file logo ke: assets/images/logo.png
+           2. Hapus seluruh blok "Mode A" di bawah
+           3. Hapus komentar -->
+    <a href="#beranda" class="nav-logo" id="navLogoLink">
+       <img src="assets/images/logo.png" alt="ABADI JAYA" class="nav-logo-img" />
+    </a>
+
+    <!-- Menu desktop (diisi otomatis dari NAV_ITEMS di config.js) -->
+    <ul class="nav-menu" id="navMenuDesktop"></ul>
+
+    <div class="nav-actions">
+      <button class="btn-dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" id="darkIcon"></i>
+      </button>
+      <!-- Nomor WA diambil otomatis dari config.js -->
+      <a id="navOrderBtn" href="#" data-wa="Halo saya ingin memesan produk Abadi Jaya"
+         target="_blank" class="btn-nav-order">
+        <i class="fab fa-whatsapp"></i> Pesan Sekarang
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <!-- Menu mobile (diisi otomatis dari NAV_ITEMS di config.js) -->
+  <div class="nav-mobile" id="navMobile"></div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="beranda">
+
+  <!-- Background layers (urutan: foto → blur progresif → overlay hijau → titik dekor) -->
+  <div class="hero-bg-img">
+    <!--
+      CARA PASANG FOTO BACKGROUND HERO:
+      Simpan foto ke: assets/images/hero-bg.jpg
+      Foto yang bagus: kebun/sawah hijau, dapur produksi, rempah-rempah, atau lanskap Solo.
+      Ukuran ideal: min. 1920x1080px, landscape.
+      Tidak perlu ubah kode apapun — cukup letakkan file dengan nama hero-bg.jpg
+    -->
+  </div>
+  <div class="hero-bg-blur"></div>
+  <div class="hero-bg-grad"></div>
+  <div class="hero-bg-dots"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-award"></i> Produk Unggulan Solo
+      </div>
+      <h1 class="hero-title">
+        Abon Sapi Asli Solo<br>dengan <span>Cita Rasa</span><br>Tradisional
+      </h1>
+      <p class="hero-sub">
+        Dibuat dari daging sapi pilihan dengan resep turun-temurun untuk menghasilkan
+        abon yang gurih, renyah, dan tahan lama. Kenikmatan autentik dalam setiap suapan.
+      </p>
+      <div class="hero-btns">
+        <a href="#" data-wa="Halo saya ingin memesan produk Abadi Jaya"
+           target="_blank" class="btn-primary">
+          <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </a>
+        <a href="#produk" class="btn-secondary">
+          <i class="fas fa-box-open"></i> Lihat Produk
+        </a>
+      </div>
+    </div>
+
+    <!-- Visual kanan: ganti <i> dengan <img> untuk foto produk asli -->
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="assets/images/utama.png" alt="Abon Sapi ABADI JAYA"
+           style="width:100%;height:100%;object-fit:cover;">
+        
+        <div class="hero-badges-float left">
+          <div class="float-badge"><i class="fas fa-check-circle"></i> 100% Daging Sapi</div>
+          <div class="float-badge"><i class="fas fa-star"></i> Halal Terjamin</div>
+        </div>
+        
+        <div class="hero-badges-float right">
+          <div class="float-badge"><i class="fas fa-map-marker-alt"></i> Produksi Lokal</div>
+          <div class="float-badge"><i class="fas fa-leaf"></i> Tanpa Pengawet</div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATISTIK ===================== -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-card aos">
+      <div class="stat-icon"><i class="fas fa-users"></i></div>
+      <div class="stat-num"><span id="statPelanggan">0</span>+</div>
+      <div class="stat-label">Pelanggan Puas</div>
+    </div>
+    <div class="stat-card aos aos-delay-1">
+      <div class="stat-icon"><i class="fas fa-box"></i></div>
+      <div class="stat-num"><span id="statProduk">0</span>rb+</div>
+      <div class="stat-label">Produk Terjual</div>
+    </div>
+    <div class="stat-card aos aos-delay-2">
+      <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+      <div class="stat-num"><span id="statTahun">0</span></div>
+      <div class="stat-label">Tahun Berdiri</div>
+    </div>
+    <div class="stat-card aos aos-delay-3">
+      <div class="stat-icon"><i class="fas fa-star"></i></div>
+      <div class="stat-num"><span id="statRating">0</span><span style="font-size:1.2rem">/5</span></div>
+      <div class="stat-label">Rating Pelanggan</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KEUNGGULAN ===================== -->
+<section class="section features" id="keunggulan">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow"><i class="fas fa-medal"></i> Mengapa Pilih Kami</div>
+      <h2 class="section-title">Keunggulan <span>Produk Kami</span></h2>
+      <p class="section-desc">Komitmen kami adalah menghadirkan abon sapi berkualitas tinggi dengan standar yang tidak pernah kami kompromikan.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card aos">
+        <div class="feat-icon"><i class="fas fa-drumstick-bite"></i></div>
+        <div class="feat-title">Daging Sapi Pilihan</div>
+        <div class="feat-desc">Hanya menggunakan daging sapi segar kualitas terbaik yang dipilih secara teliti dari sumber terpercaya setiap harinya.</div>
+      </div>
+      <div class="feat-card aos aos-delay-1">
+        <div class="feat-icon"><i class="fas fa-star"></i></div>
+        <div class="feat-title">Rasa Khas Solo</div>
+        <div class="feat-desc">Resep tradisional turun-temurun khas Solo yang telah teruji selama bertahun-tahun. Cita rasa autentik yang sulit ditemukan di tempat lain.</div>
+      </div>
+      <div class="feat-card aos aos-delay-2">
+        <div class="feat-icon"><i class="fas fa-mosque"></i></div>
+        <div class="feat-title">Produk Halal</div>
+        <div class="feat-desc">Seluruh proses produksi memenuhi standar halal dengan bahan-bahan yang terjamin kehalalannya untuk ketenangan Anda dan keluarga.</div>
+      </div>
+      <div class="feat-card aos aos-delay-3">
+        <div class="feat-icon"><i class="fas fa-leaf"></i></div>
+        <div class="feat-title">Tanpa Bahan Berbahaya</div>
+        <div class="feat-desc">Bebas dari pengawet berbahaya dan zat aditif yang merusak. Hanya bahan alami pilihan yang masuk ke dalam setiap kemasan kami.</div>
+      </div>
+      <div class="feat-card aos aos-delay-4">
+        <div class="feat-icon"><i class="fas fa-clock"></i></div>
+        <div class="feat-title">Tahan Lama</div>
+        <div class="feat-desc">Proses pengolahan higienis dan pengemasan modern memastikan kesegaran dan ketahanan produk hingga 6 bulan dalam kondisi penyimpanan yang tepat.</div>
+      </div>
+      <div class="feat-card aos aos-delay-5">
+        <div class="feat-icon"><i class="fas fa-gift"></i></div>
+        <div class="feat-title">Cocok Untuk Oleh-Oleh</div>
+        <div class="feat-desc">Kemasan menarik dan higienis menjadikan abon sapi kami pilihan tepat sebagai oleh-oleh khas Solo yang berkesan untuk kerabat dan kolega.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CARA PEMESANAN ===================== -->
+<section class="section howto">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow"><i class="fas fa-shopping-cart"></i> Cara Pemesanan</div>
+      <h2 class="section-title">Pesan dalam <span>5 Langkah Mudah</span></h2>
+      <p class="section-desc">Proses pemesanan yang cepat dan mudah langsung via WhatsApp. Tidak perlu akun atau registrasi apapun.</p>
+    </div>
+    <div class="steps-track">
+      <div class="step-item aos">
+        <div class="step-num"><i class="fas fa-box-open"></i></div>
+        <div class="step-content">
+          <div class="step-title">Pilih Produk</div>
+          <div class="step-desc">Pilih varian dan ukuran abon sapi yang Anda inginkan dari katalog kami</div>
+        </div>
+      </div>
+      <div class="step-item aos aos-delay-1">
+        <div class="step-num"><i class="fas fa-mouse-pointer"></i></div>
+        <div class="step-content">
+          <div class="step-title">Klik Pesan</div>
+          <div class="step-desc">Tekan tombol Pesan via WhatsApp pada produk pilihan Anda</div>
+        </div>
+      </div>
+      <div class="step-item aos aos-delay-2">
+        <div class="step-num"><i class="fab fa-whatsapp"></i></div>
+        <div class="step-content">
+          <div class="step-title">Terhubung WhatsApp</div>
+          <div class="step-desc">Pesan produk otomatis terisi, langsung terhubung dengan tim kami</div>
+        </div>
+      </div>
+      <div class="step-item aos aos-delay-3">
+        <div class="step-num"><i class="fas fa-check-circle"></i></div>
+        <div class="step-content">
+          <div class="step-title">Konfirmasi Pesanan</div>
+          <div class="step-desc">Konfirmasi jumlah, alamat pengiriman, dan metode pembayaran</div>
+        </div>
+      </div>
+      <div class="step-item aos aos-delay-4">
+        <div class="step-num"><i class="fas fa-truck"></i></div>
+        <div class="step-content">
+          <div class="step-title">Produk Dikirim</div>
+          <div class="step-desc">Produk dikemas dengan higienis dan dikirimkan ke alamat Anda</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUK ===================== -->
+<section class="section products" id="produk">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow"><i class="fas fa-box-open"></i> Katalog Produk</div>
+      <h2 class="section-title">Pilihan <span>Produk Kami</span></h2>
+      <p class="section-desc">Tersedia dalam berbagai ukuran dan varian untuk memenuhi kebutuhan Anda, dari konsumsi pribadi hingga oleh-oleh keluarga.</p>
+    </div>
+    <div class="product-filters">
+      <button class="filter-btn active" onclick="filterProduct('semua', this)">Semua</button>
+      <button class="filter-btn"        onclick="filterProduct('original', this)">Original</button>
+      <button class="filter-btn"        onclick="filterProduct('pedas', this)">Pedas</button>
+    </div>
+    <!-- Diisi otomatis dari PRODUCTS di config.js -->
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONI ===================== -->
+<section class="section testimonials" id="testimoni">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow"><i class="fas fa-comments"></i> Apa Kata Mereka</div>
+      <h2 class="section-title">Testimoni <span>Pelanggan Setia</span></h2>
+      <p class="section-desc">Kepuasan pelanggan adalah prioritas utama kami. Inilah pengalaman nyata dari mereka yang telah mempercayakan kebutuhan abon mereka pada ABADI JAYA.</p>
+    </div>
+    <!-- Diisi otomatis dari TESTIMONIALS di config.js -->
+    <div class="testi-grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== TENTANG KAMI ===================== -->
+<section class="section about" id="tentang">
+  <div class="section-inner">
+    <div class="about-grid">
+      <!-- Ganti <i> dengan <img> untuk foto proses produksi -->
+      <div class="about-img-box aos">
+          <img src="assets/images/toko.jpeg" alt="Proses Produksi ABADI JAYA"
+               style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="aos aos-delay-2">
+        <div class="about-eyebrow"><i class="fas fa-store"></i> Tentang Kami</div>
+        <h2 class="about-title">Usaha Keluarga <span>Penuh Dedikasi</span> Sejak 2005</h2>
+        <p class="about-text">
+          ABADI JAYA merupakan usaha abon sapi khas Solo yang berkomitmen menghadirkan produk berkualitas
+          dengan cita rasa tradisional dan bahan baku pilihan. Berawal dari dapur keluarga, kami terus
+          berkembang dengan mempertahankan nilai-nilai kesederhanaan dan kejujuran dalam setiap produk
+          yang kami hasilkan.
+        </p>
+        <p class="about-text">
+          Selama lebih dari dua dekade, kami telah melayani ribuan pelanggan setia dari berbagai penjuru
+          Indonesia. Kepercayaan mereka adalah motivasi terbesar kami untuk terus berinovasi tanpa
+          meninggalkan akar tradisi.
+        </p>
+        <div class="about-highlights">
+          <div class="about-hi-item">
+            <div class="about-hi-icon"><i class="fas fa-history"></i></div>
+            <div class="about-hi-text">
+              <h4>Berdiri Sejak 2005</h4>
+              <p>Lebih dari 20 tahun pengalaman dalam industri abon sapi khas Solo</p>
+            </div>
+          </div>
+          <div class="about-hi-item">
+            <div class="about-hi-icon"><i class="fas fa-users"></i></div>
+            <div class="about-hi-text">
+              <h4>Usaha Berbasis Keluarga</h4>
+              <p>Dikelola penuh dengan nilai kekeluargaan, kejujuran, dan semangat pelayanan</p>
+            </div>
+          </div>
+          <div class="about-hi-item">
+            <div class="about-hi-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="about-hi-text">
+              <h4>Pengiriman Seluruh Indonesia</h4>
+              <p>Tersedia layanan pengiriman ke seluruh wilayah Indonesia dengan pengemasan aman</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERTIFIKASI ===================== -->
+<section class="trust">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow"><i class="fas fa-shield-alt"></i> Kepercayaan Kami</div>
+      <h2 class="section-title">Sertifikasi <span>&amp; Standar</span></h2>
+      <p class="section-desc">Seluruh produk ABADI JAYA diproduksi sesuai dengan standar kualitas dan keamanan pangan yang berlaku.</p>
+    </div>
+    <div class="trust-grid">
+
+      <!-- Card 1 — Halal -->
+      <div class="trust-badge aos">
+        <div class="trust-img" style="background:linear-gradient(135deg,#e8f5e9 60%,#c8e6c9);">
+          <!--
+            Ganti ikon dengan foto sertifikat:
+            <img src="assets/images/sertifikat-halal.jpg" alt="Sertifikat Halal"
+                 style="width:100%;height:100%;object-fit:cover;">
+          -->
+          <i class="fas fa-mosque"></i>
+          <div class="trust-img-label">Sertifikat Halal</div>
+        </div>
+        <div class="trust-body">
+          <div class="trust-name">Produk Halal</div>
+          <div class="trust-sub">Bahan &amp; proses halal</div>
+          <div class="trust-points">
+          <div class="trust-point"><i class="fas fa-check"></i>Bahan baku 100% halal</div>
+          <div class="trust-point"><i class="fas fa-check"></i>Proses produksi sesuai syariat</div>
+          <div class="trust-point"><i class="fas fa-check"></i>Dikonsumsi seluruh keluarga</div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 2 — UMKM -->
+      <div class="trust-badge aos aos-delay-1">
+        <div class="trust-img" style="background:linear-gradient(135deg,#fff8e1 60%,#ffe082);">
+          <!--
+            <img src="assets/images/sertifikat-umkm.jpg" alt="UMKM Resmi"
+                 style="width:100%;height:100%;object-fit:cover;">
+          -->
+          <i class="fas fa-store" style="color:#f59e0b;"></i>
+          <div class="trust-img-label" style="color:#b45309;background:rgba(245,158,11,0.08);">UMKM Resmi</div>
+        </div>
+        <div class="trust-body">
+          <div class="trust-name">UMKM Resmi</div>
+          <div class="trust-sub">Terdaftar dan legal</div>
+          <div class="trust-points">
+          <div class="trust-point"><i class="fas fa-check"></i>Terdaftar resmi pemerintah</div>
+          <div class="trust-point"><i class="fas fa-check"></i>Transaksi aman & terjamin</div>
+          <div class="trust-point"><i class="fas fa-check"></i>Usaha legal sejak 2005</div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 3 — Produk Lokal -->
+      <div class="trust-badge aos aos-delay-2">
+        <div class="trust-img" style="background:linear-gradient(135deg,#e3f2fd 60%,#bbdefb);">
+          <!--
+            <img src="assets/images/produk-lokal.jpg" alt="Produk Lokal"
+                 style="width:100%;height:100%;object-fit:cover;">
+          -->
+          <i class="fas fa-map-marker-alt" style="color:#1976d2;"></i>
+          <div class="trust-img-label" style="color:#1565c0;background:rgba(25,118,210,0.08);">Produk Lokal</div>
+        </div>
+        <div class="trust-body">
+          <div class="trust-name">Produk Lokal</div>
+          <div class="trust-sub">Asli buatan Indonesia</div>
+          <div class="trust-points">
+          <div class="trust-point"><i class="fas fa-check"></i>Produksi di Solo, Jawa Tengah</div>
+          <div class="trust-point"><i class="fas fa-check"></i>Tenaga kerja lokal</div>
+          <div class="trust-point"><i class="fas fa-check"></i>Dukung UMKM Indonesia</div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Card 4 — Higienis -->
+      <div class="trust-badge aos aos-delay-3">
+        <div class="trust-img" style="background:linear-gradient(135deg,#fce4ec 60%,#f8bbd0);">
+          <!--
+            <img src="assets/images/standar-higienis.jpg" alt="Higienis"
+                 style="width:100%;height:100%;object-fit:cover;">
+          -->
+          <i class="fas fa-hand-sparkles" style="color:#e91e63;"></i>
+          <div class="trust-img-label" style="color:#c2185b;background:rgba(233,30,99,0.08);">Standar Higienis</div>
+        </div>
+        <div class="trust-body">
+          <div class="trust-name">Higienis</div>
+          <div class="trust-sub">Standar sanitasi ketat</div>
+          <div class="trust-points">
+          <div class="trust-point"><i class="fas fa-check"></i>Sanitasi standar ketat</div>
+          <div class="trust-point"><i class="fas fa-check"></i>Peralatan disterilisasi rutin</div>
+          <div class="trust-point"><i class="fas fa-check"></i>Kemasan higienis & aman</div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section faq" id="faq">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow"><i class="fas fa-question-circle"></i> Pertanyaan Umum</div>
+      <h2 class="section-title">Sering <span>Ditanyakan</span></h2>
+      <p class="section-desc">Temukan jawaban atas pertanyaan yang paling sering diajukan oleh pelanggan kami.</p>
+    </div>
+    <!-- Diisi otomatis dari FAQS di config.js -->
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta-section">
+
+  <!-- Layer 1: Google Maps (ganti src dengan embed lokasi toko kamu) -->
+  <div class="cta-map">
+    <!-- Layer 1: Google Maps (iframe dibungkus <a> agar bisa diklik ke GMaps) -->
+  <div class="cta-map">
+    <!--
+      CARA GANTI KE LOKASI TOKO KAMU:
+      1. Buka maps.google.com → cari alamat toko
+      2. Klik "Bagikan" → "Sematkan peta" → salin src dari iframe
+      3. Tempel ke atribut src iframe di bawah
+      4. Salin juga URL biasa peta (bukan embed) ke href pada tag <a> di bawah
+         Contoh href: https://maps.google.com/?q=Solo+Indonesia
+    -->
+    <a class="cta-map-link"
+       href="https://maps.app.goo.gl/TFHjvNzyEWUw3QMU9"
+       target="_blank" rel="noopener" aria-label="Buka lokasi di Google Maps">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15820.666546595337!2d110.84332803205017!3d-7.556802365792478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a173037d735bf%3A0xdeba5b0cde907e7c!2sAbon%20Sapi%20ABADI%20JAYA%20Solo!5e0!3m2!1sid!2sid!4v1782342357020!5m2!1sid!2sid" 
+        width="600" height="450" 
+        style="border:0;" allowfullscreen="" 
+        loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </a>
+  </div>
+
+  <!-- Layer 2: Blur + overlay hijau (pointer-events: none agar klik tembus ke peta) -->
+  <div class="cta-map-blur"></div>
+
+  <!-- Layer 3: Konten -->
+  <div class="cta-inner">
+    <!-- Badge lokasi juga bisa diklik ke GMaps -->
+    <a class="cta-location-badge"
+       href="https://maps.app.goo.gl/TFHjvNzyEWUw3QMU9"
+       target="_blank" rel="noopener">
+      <i class="fas fa-map-marker-alt"></i> Solo, Jawa Tengah, Indonesia
+    </a>
+    <h2 class="cta-title">Siap Menikmati Abon Sapi<br><span>Asli Solo?</span></h2>
+    <p class="cta-desc">Pesan sekarang dan dapatkan abon sapi terbaik langsung ke pintu rumah Anda. Tersedia pengiriman ke seluruh Indonesia.</p>
+    <div class="cta-btns">
+      <a href="#" data-wa="Halo saya ingin memesan produk Abadi Jaya" target="_blank" class="btn-cta">
+        <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i>
+        Pesan Sekarang via WhatsApp
+      </a>
+      <a href="https://maps.app.goo.gl/TFHjvNzyEWUw3QMU9"
+         target="_blank" rel="noopener" class="btn-cta-maps">
+        <i class="fas fa-map-marker-alt"></i>
+        Temukan Toko Kami di Google Maps
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="kontak">
+  <div class="footer-inner">
+
+    <!-- Kolom brand -->
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon"><i class="fas fa-seedling"></i></div>
+        ABADI <span>JAYA</span>
+      </div>
+      <div class="footer-tagline">Abon Sapi Asli Solo Sejak 2005</div>
+      <p class="footer-desc">
+        Usaha abon sapi khas Solo dengan cita rasa tradisional dan bahan baku pilihan.
+        Melayani pengiriman ke seluruh Indonesia dengan pengemasan aman.
+      </p>
+      <div class="footer-trust-badges">
+        <span class="footer-trust-badge"><i class="fas fa-mosque"></i> Produk Halal</span>
+        <span class="footer-trust-badge"><i class="fas fa-store"></i> UMKM Resmi</span>
+        <span class="footer-trust-badge"><i class="fas fa-shipping-fast"></i> Kirim Se-Indonesia</span>
+      </div>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="mailto:abadijaya@email.com" class="social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Kolom navigasi -->
+    <div>
+      <div class="footer-col-title">Navigasi</div>
+      <ul class="footer-links">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#keunggulan">Keunggulan</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#kontak">Hubungi Kami</a></li>
+      </ul>
+    </div>
+
+    <!-- Kolom produk -->
+    <div>
+      <div class="footer-col-title">Produk</div>
+      <ul class="footer-links">
+        <li><a href="#produk">Abon Sapi Original</a></li>
+        <li><a href="#produk">Abon Sapi Pedas</a></li>
+        <li><a href="#produk">Kemasan 100gr</a></li>
+        <li><a href="#produk">Kemasan 250gr</a></li>
+        <li><a href="#produk">Kemasan 500gr</a></li>
+      </ul>
+    </div>
+
+    <!-- Kolom kontak & jam -->
+    <div>
+      <div class="footer-col-title">Hubungi Kami</div>
+      <div class="footer-contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Solo, Jawa Tengah, Indonesia</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <span>+62 858-6677-5305</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>abadijaya@email.com</span>
+      </div>
+      <div class="footer-hours">
+        <div class="footer-hours-title"><i class="fas fa-clock" style="margin-right:5px;"></i>Jam Operasional</div>
+        <div class="footer-hours-row">
+          <span>Senin – Sabtu</span>
+          <span>07.00 – 17.00</span>
+        </div>
+        <div class="footer-hours-row">
+          <span>Minggu</span>
+          <span>08.00 – 14.00</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2025 ABADI JAYA. Seluruh hak dilindungi.</div>
+    <div class="footer-bottom-links">
+      <a href="#">Kebijakan Privasi</a>
+      <a href="#">Syarat &amp; Ketentuan</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING BUTTONS ===================== -->
+<a href="#" data-wa="Halo saya ingin memesan produk Abadi Jaya"
+   target="_blank" class="float-wa" aria-label="Chat WhatsApp">
+  <span class="float-wa-label">Chat Kami</span>
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button class="back-top" id="backTop" aria-label="Kembali ke atas">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- JS: config.js HARUS dimuat sebelum main.js -->
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
